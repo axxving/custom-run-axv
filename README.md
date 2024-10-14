@@ -19,7 +19,7 @@ Este proyecto incluye scripts para abrir dos terminales de forma automática, ca
     @echo off
     
     REM Activar el entorno virtual de Python y ejecutar el servidor de Django
-    start cmd.exe /k "cd {ruta-al-directorio-del-entorno-virtual} && envTADV\Scripts\activate.bat && cd {ruta-al-directorio-django} && python manage.py runserver"
+    start cmd.exe /k "cd {ruta-al-directorio-del-entorno-virtual} && {entorno}\Scripts\activate.bat && cd {ruta-al-directorio-django} && python manage.py runserver"
     
     REM Iniciar npm run dev en otra ventana
     start cmd.exe /k "cd {ruta-al-directorio-del-proyecto-node} && npm run dev"
@@ -55,7 +55,7 @@ Este proyecto incluye scripts para abrir dos terminales de forma automática, ca
     osascript -e 'tell application "Terminal" to do script "cd {ruta-al-directorio-del-proyecto-node} && npm run dev"'
 
     # Abrir nueva ventana para activar el entorno virtual y ejecutar Django
-    osascript -e 'tell application "Terminal" to do script "cd {ruta-al-directorio-del-entorno-virtual} && source envTADV/bin/activate && cd {ruta-al-directorio-django} && python manage.py runserver"'
+    osascript -e 'tell application "Terminal" to do script "cd {ruta-al-directorio-del-entorno-virtual} && source {entorno}/bin/activate && cd {ruta-al-directorio-django} && python manage.py runserver"'
     ```
 
 3. **Explicación del archivo**:
